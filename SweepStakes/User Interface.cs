@@ -57,5 +57,18 @@ namespace SweepStakes
             }
             return TypeOfManager();
         }
+        public static int HowManyContestants()
+        {
+            Console.WriteLine("How many contestants to add to sweep stakes?");
+            try
+            {
+                int input = int.Parse(Console.ReadLine());
+                return input;
+            }
+            catch(FormatException);
+            {
+                return HowManyContestants();
+            }
+        }
     }
 }

@@ -9,14 +9,20 @@ namespace SweepStakes
     class SweepStakesStackManager : ISweepStakeManager
     {
         Stack<SweepStakes> stack = new Stack<SweepStakes>();
+
         
         public void InsertSweepStakes(SweepStakes sweepStakes)
         {
+            sweepStakes.RegisterContestant();
             stack.Push(sweepStakes);
         }
         public SweepStakes GetSweepStakes()
         {
             return stack.Pop();
+        }
+        public void WinSweepStakes()
+        {
+            GetSweepStakes().PickWinner();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace SweepStakes
 {
     
-    class SweepStakes
+    public class SweepStakes
     {
        public Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
         public int count = 1;
@@ -30,10 +30,14 @@ namespace SweepStakes
         }
         public void RegisterContestant()
         {
-            Contestant contestant = new Contestant();
-            contestants.Add(count, contestant);
-            PrintContestantInfo(contestant);
-            count++;
+            int numOfContestants = User_Interface.HowManyContestants();
+            while (numOfContestants != 0)
+            {
+                Contestant contestant = new Contestant();
+                contestants.Add(count, contestant);
+                PrintContestantInfo(contestant);
+                count++;
+            }
         }
         public Contestant PickWinner()
         {
@@ -41,12 +45,17 @@ namespace SweepStakes
             int i = random.Next(1, count+1 );
             winner = contestants[i];
             Console.WriteLine("The winner is "); PrintContestantInfo(winner);
+            WhatDidTheyWin();
             return winner;
         }
         public void PrintContestantInfo(Contestant contestant)
         {
             Console.WriteLine(contestant.registrationCode+ " "+ contestant.firstName + " " + contestant.lastName + " " + contestant.email + " is registered.");
 
+        }
+        public void WhatDidTheyWin()
+        {
+            Console.WriteLine("They won free " + name.ToUpper()) ;
         }
     }
 }
