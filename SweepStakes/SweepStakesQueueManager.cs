@@ -4,9 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SweepStakes
+namespace SweepStakes 
 {
-    class SweepStakesQueueManager
+    class SweepStakesQueueManager : ISweepStakeManager
     {
+        Queue<SweepStakes> sweepStakes = new Queue<SweepStakes>();
+
+        public void InsertSweepStakes(SweepStakes sweepStakes)
+        {
+
+        }
+        public SweepStakes GetSweepStakes()
+        {
+            return
+        }
     }
 }
