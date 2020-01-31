@@ -13,8 +13,13 @@ namespace SweepStakes
         
         public void InsertSweepStakes(SweepStakes sweepStakes)
         {
-            sweepStakes.RegisterContestant();
-            stack.Push(sweepStakes);
+            int numOfSweepStakes = User_Interface.HowManySweepStakesToAdd();
+            while (numOfSweepStakes != 0)
+            {
+                sweepStakes.RegisterContestant();
+                stack.Push(sweepStakes);
+                numOfSweepStakes--;
+            }
         }
         public SweepStakes GetSweepStakes()
         {

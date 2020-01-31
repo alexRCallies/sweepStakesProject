@@ -37,6 +37,7 @@ namespace SweepStakes
                 contestants.Add(count, contestant);
                 PrintContestantInfo(contestant);
                 count++;
+                numOfContestants--;
             }
         }
         public Contestant PickWinner()

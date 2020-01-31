@@ -65,10 +65,24 @@ namespace SweepStakes
                 int input = int.Parse(Console.ReadLine());
                 return input;
             }
-            catch(FormatException);
+            catch(FormatException)
             {
                 return HowManyContestants();
             }
         }
+        public static int HowManySweepStakesToAdd()
+        {
+            Console.WriteLine("How many sweep stakes to add?");
+            try
+            {
+                int input = int.Parse(Console.ReadLine());
+                return input;
+            }
+            catch
+            {
+                return HowManyContestants();
+            }
+        }
+       
     }
 }
