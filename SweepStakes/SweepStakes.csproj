@@ -52,6 +52,7 @@
     <Compile Include="SweepStakes.cs" />
     <Compile Include="SweepStakesQueueManager.cs" />
     <Compile Include="SweepStakesStackManager.cs" />
+    <Compile Include="User Interface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

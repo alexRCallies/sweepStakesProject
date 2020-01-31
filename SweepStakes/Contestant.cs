@@ -12,12 +12,12 @@ namespace SweepStakes
        public string lastName;
        public string email;
        public int registrationCode;
-        public Contestant(string firstName, string lastName, string email, int registrationCode )
+        public Contestant()
         {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.email = email;
-            this.registrationCode = registrationCode;
+            this.firstName = User_Interface.ContestantFirstName();
+            this.lastName = User_Interface.ContestantLastName();
+            this.email = User_Interface.ContestantEmail();
+            this.registrationCode = User_Interface.ContestantRegistrationCode();
         }
     }
 }

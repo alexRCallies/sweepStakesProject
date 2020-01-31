@@ -10,10 +10,6 @@ namespace SweepStakes
     class SweepStakes
     {
        public Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
-        Contestant alex = new Contestant("Alex", "Callies", "alexcallies@yahoo.com", 3517911);
-        Contestant karvin = new Contestant("Karvin", "White", "karvinwhite@gmail.com", 8888888);
-        Contestant tiffany = new Contestant("Tiffany", "Knight", "tiffNight@aol.com", 1234567);
-        Contestant hataya = new Contestant("Hataya", "Johnson", "sparklezrule#outlook.com", 3336622);
         public int count = 1;
         Contestant winner;
        private string name;
@@ -32,8 +28,9 @@ namespace SweepStakes
         {
             this.name = name;
         }
-        public void RegisterContestant(Contestant contestant)
+        public void RegisterContestant()
         {
+            Contestant contestant = new Contestant();
             contestants.Add(count, contestant);
             PrintContestantInfo(contestant);
             count++;
@@ -43,6 +40,7 @@ namespace SweepStakes
             Random random = new Random();
             int i = random.Next(1, count+1 );
             winner = contestants[i];
+            Console.WriteLine("The winner is "); PrintContestantInfo(winner);
             return winner;
         }
         public void PrintContestantInfo(Contestant contestant)
