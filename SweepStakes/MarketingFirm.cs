@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class MarketingFirm : ISweepStakeManager
+    class MarketingFirm
     {
-        List<ISweepStakeManager> manager = new List<ISweepStakeManager>();
 
+        ISweepStakeManager manager;
         public MarketingFirm(ISweepStakeManager manager)
         {
-
+            this.manager = manager;
         }
+
+       
         public void CreateSweepStakes()
         {
-
+           
+           
         }
     }
 }

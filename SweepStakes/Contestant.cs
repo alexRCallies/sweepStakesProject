@@ -8,10 +8,10 @@ namespace SweepStakes
 {
     public class Contestant
     {
-        string firstName;
-        string lastName;
-        string email;
-        int registrationCode;
+       public string firstName;
+       public string lastName;
+       public string email;
+       public int registrationCode;
         public Contestant(string firstName, string lastName, string email, int registrationCode )
         {
             this.firstName = firstName;
