@@ -25,7 +25,15 @@ namespace SweepStakes
         {
             Console.WriteLine("E-mail");
             string input = Console.ReadLine();
-            return input;
+            if (input.Contains("@"))
+            {
+                if (input.Contains(".com"))
+                {
+                    return input;
+                }
+                return ContestantEmail();
+            }
+            return ContestantEmail();
         }
         public static int ContestantRegistrationCode()
         {

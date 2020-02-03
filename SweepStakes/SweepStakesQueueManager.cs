@@ -17,6 +17,7 @@ namespace SweepStakes
             int numOfSweepStakes = User_Interface.HowManySweepStakesToAdd();
             while (numOfSweepStakes != 0)
             {
+                sweepStakes = new SweepStakes();
                 sweepStakes.RegisterContestant();
                 queue.Enqueue(sweepStakes);
                 numOfSweepStakes--;

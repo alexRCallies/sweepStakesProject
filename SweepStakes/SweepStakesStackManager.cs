@@ -24,10 +24,7 @@ namespace SweepStakes
         }
         public SweepStakes GetSweepStakes()
         {
-            foreach (SweepStakes stacks in stack)
-            {
-                Console.WriteLine(stacks);
-            }
+            
             return stack.Pop();
         }
         public void WinSweepStakes()

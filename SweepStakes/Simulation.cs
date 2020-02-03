@@ -16,6 +16,7 @@ namespace SweepStakes
         public void RunSimulation()
         {
             marketingFirm.CreateSweepStakes();
+            Console.ReadLine();
         }
     }
 }
