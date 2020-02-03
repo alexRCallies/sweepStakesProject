@@ -22,6 +22,7 @@ namespace SweepStakes
                     return _manager = new SweepStakesQueueManager();
                 default:
                     throw new ApplicationException(string.Format("Not a valid manager"));
+                    
             }
         }
     public void CreateSweepStakes()

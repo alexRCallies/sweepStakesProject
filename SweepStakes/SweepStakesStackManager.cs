@@ -18,6 +18,7 @@ namespace SweepStakes
             {
                 sweepStakes = new SweepStakes();
                 sweepStakes.RegisterContestant();
+                SweepStakesReady(sweepStakes);
                 stack.Push(sweepStakes);
                 numOfSweepStakes--;
             }
@@ -34,6 +35,10 @@ namespace SweepStakes
                sweepStakes = GetSweepStakes();
                 sweepStakes.PickWinner();
             }
+        }
+        public void SweepStakesReady(SweepStakes sweepStakes)
+        {
+            Console.WriteLine(sweepStakes.Name + " is ready to go");
         }
     }
 }

@@ -60,7 +60,7 @@ namespace SweepStakes
         public int PickRandom()
         {
             Random random = new Random();
-            int i = random.Next(1, count + 1);
+            int i = random.Next(1, count);
             return i;
         }
     } 

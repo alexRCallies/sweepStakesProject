@@ -44,6 +44,7 @@ namespace SweepStakes
                 int input = int.Parse(Console.ReadLine());
                 return input;
             }
+           
             catch(FormatException)
             {
                 Console.WriteLine("Please enter a valid registration code.");
@@ -55,7 +56,15 @@ namespace SweepStakes
             Console.WriteLine("Would you like to run a stack or queue?");
             string input = Console.ReadLine();
             input = input.ToLower();
-            return input;
+            if (input == "stack")
+            {
+                return input;
+            }
+            if(input == "queue")
+            {
+                return input;
+            }
+            return TypeOfManager();
         }
         public static int HowManyContestants()
         {
@@ -80,7 +89,7 @@ namespace SweepStakes
             }
             catch
             {
-                return HowManyContestants();
+                return HowManySweepStakesToAdd();
             }
         }
        public static string SweepStakesName()
