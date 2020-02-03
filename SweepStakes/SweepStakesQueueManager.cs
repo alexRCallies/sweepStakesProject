@@ -11,6 +11,7 @@ namespace SweepStakes
 
         Queue<SweepStakes> queue = new Queue<SweepStakes>();
         SweepStakes sweepStakes;
+
         
         public void InsertSweepStakes(SweepStakes sweepStakes)
         {

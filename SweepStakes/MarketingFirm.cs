@@ -11,23 +11,14 @@ namespace SweepStakes
 
         public ISweepStakeManager _manager;
         SweepStakes sweepStakes;
-        
-        public ISweepStakeManager WhichManager()
+        public MarketingFirm(ISweepStakeManager manager)
         {
-            switch (User_Interface.TypeOfManager())
-            {
-                case "stack":
-                    return _manager = new SweepStakesStackManager();
-                case "queue":
-                    return _manager = new SweepStakesQueueManager();
-                default:
-                    throw new ApplicationException(string.Format("Not a valid manager"));
-                    
-            }
+            this._manager = manager;
         }
+       
     public void CreateSweepStakes()
         {
-            WhichManager();
+            
             _manager.InsertSweepStakes(sweepStakes);
             _manager.WinSweepStakes();
            
