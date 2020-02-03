@@ -8,6 +8,14 @@ namespace SweepStakes
 {
     class Simulation
     {
-       
+        MarketingFirm marketingFirm;
+        public Simulation()
+        {
+            marketingFirm = new MarketingFirm();
+        }
+        public void RunSimulation()
+        {
+            marketingFirm.CreateSweepStakes();
+        }
     }
 }

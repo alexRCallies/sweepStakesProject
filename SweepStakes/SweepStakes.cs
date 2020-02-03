@@ -24,9 +24,9 @@ namespace SweepStakes
                 name = value;
             }
         }
-        public SweepStakes(string name)
+        public SweepStakes()
         {
-            this.name = name;
+            this.name = User_Interface.SweepStakesName();
         }
         public void RegisterContestant()
         {
@@ -42,8 +42,7 @@ namespace SweepStakes
         }
         public Contestant PickWinner()
         {
-            Random random = new Random();
-            int i = random.Next(1, count+1 );
+            int i = PickRandom();
             winner = contestants[i];
             Console.WriteLine("The winner is "); PrintContestantInfo(winner);
             WhatDidTheyWin();
@@ -58,5 +57,11 @@ namespace SweepStakes
         {
             Console.WriteLine("They won free " + name.ToUpper()) ;
         }
-    }
+        public int PickRandom()
+        {
+            Random random = new Random();
+            int i = random.Next(1, count + 1);
+            return i;
+        }
+    } 
 }

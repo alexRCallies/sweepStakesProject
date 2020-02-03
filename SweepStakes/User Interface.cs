@@ -47,15 +47,7 @@ namespace SweepStakes
             Console.WriteLine("Would you like to run a stack or queue?");
             string input = Console.ReadLine();
             input = input.ToLower();
-            if (input == "stack")
-            {
-                return input;
-            }
-            else if(input == "queue")
-            {
-                return input;
-            }
-            return TypeOfManager();
+            return input;
         }
         public static int HowManyContestants()
         {
@@ -83,6 +75,12 @@ namespace SweepStakes
                 return HowManyContestants();
             }
         }
-       
+       public static string SweepStakesName()
+        {
+            Console.WriteLine("What should the prize be?");
+      
+                string input = Console.ReadLine();
+            return input;
+        }
     }
 }

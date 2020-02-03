@@ -10,7 +10,7 @@ namespace SweepStakes
     {
 
         Queue<SweepStakes> queue = new Queue<SweepStakes>();
-        
+        SweepStakes sweepStakes;
         
         public void InsertSweepStakes(SweepStakes sweepStakes)
         {
@@ -24,12 +24,20 @@ namespace SweepStakes
         }
         public SweepStakes GetSweepStakes()
         {
-           return queue.Dequeue();
+            foreach(SweepStakes queues in queue)
+            {
+                Console.WriteLine(queues);
+            }
+            return queue.Dequeue();
+           
         }
         public void WinSweepStakes()
         {
-            GetSweepStakes().PickWinner();
-            
+            while (queue.Count != 0)
+            {
+                sweepStakes = GetSweepStakes();
+                sweepStakes.PickWinner();
+            }
         }
     }
 }
