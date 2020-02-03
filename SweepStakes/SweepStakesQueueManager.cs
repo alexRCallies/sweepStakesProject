@@ -26,10 +26,7 @@ namespace SweepStakes
         }
         public SweepStakes GetSweepStakes()
         {
-            foreach(SweepStakes queues in queue)
-            {
-                Console.WriteLine(queues);
-            }
+            
             return queue.Dequeue();
            
         }

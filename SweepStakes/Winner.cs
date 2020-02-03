@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-   public class Contestant : IContestant
+    public class Winner : IContestant
     {
         private string firstName;
         public string FirstName
@@ -31,7 +31,7 @@ namespace SweepStakes
 
             set
             {
-                LastName = value;
+                lastName = value;
             }
         }
         private string email;
@@ -59,17 +59,10 @@ namespace SweepStakes
                 registrationCode = value;
             }
         }
-       public Contestant()
-        {
-            this.firstName = User_Interface.ContestantFirstName();
-            this.lastName = User_Interface.ContestantLastName();
-            this.email = User_Interface.ContestantEmail();
-            this.registrationCode = User_Interface.ContestantRegistrationCode();
-        }
-       
+        
         public void Notify(IContestant contestant)
         {
-            Console.WriteLine(firstName + " you are a loser.");
+            Console.WriteLine(firstName + " you are the winner");
         }
     }
 }
